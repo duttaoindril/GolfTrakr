@@ -11,7 +11,6 @@ public class MainActivity extends ListActivity { //AppCompatActivity {
     private static final String PREFS_FILE = " com.drillin.golftrakrapp.preferences";
     private static final String KEY_NAME = "holez";
     private SharedPreferences.Editor prefEditor;
-    private SharedPreferences sharedPreferences;
     private ListAdapter lAdapter;
     private int[] holes = new int[18];
 
@@ -34,7 +33,7 @@ public class MainActivity extends ListActivity { //AppCompatActivity {
             }
         });
 
-        sharedPreferences = getSharedPreferences(PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFS_FILE, Context.MODE_PRIVATE);
         prefEditor = sharedPreferences.edit();
         prefEditor.apply();
 

@@ -1,5 +1,6 @@
 package com.drillin.oindrildutta.golftrakr;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +25,7 @@ public class ListAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return new Integer(holes[position]);
+        return holes[position];
     }
 
     @Override
@@ -32,6 +33,7 @@ public class ListAdapter extends BaseAdapter {
         return 0;
     }
 
+    @SuppressLint({"SetTextI18n", "InflateParams"})
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         final ViewHolder holder;
